@@ -1,19 +1,12 @@
 # The Redhead Advantage website
 
-Static website files for GitHub Pages.
+Static website for The Redhead Advantage.
 
-## Important image step
-Upload your preferred banner into the `assets` folder and rename it exactly:
+## Publishing
+Upload all files and the `assets` folder to the root of the GitHub repository. GitHub Pages should deploy from the `main` branch and `/(root)` folder.
 
-`hero-banner.png`
+## Forms
+The contact and newsletter forms currently use FormSubmit. The first submission may require email activation. Replace the form action with a dedicated email/newsletter provider before a larger public launch.
 
-## What each file does
-- `index.html`: homepage
-- `about.html`: Meet Charlotte page
-- `insights.html`: articles and videos landing page
-- `resources.html`: digital resources landing page
-- `contact.html`: contact page
-- `styles.css`: all colors, fonts, spacing, and mobile layout
-- `script.js`: mobile menu
-
-The contact form uses FormSubmit and requires a one-time email confirmation after the first submission.
+## Legal review
+The legal pages are practical starter templates, not legal advice. Review them with a qualified attorney before launch, especially after adding analytics, advertising, affiliate programs, ecommerce, downloadable products, consulting, or newsletter software.
