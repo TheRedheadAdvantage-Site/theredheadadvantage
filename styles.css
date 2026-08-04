@@ -70,3 +70,93 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
     white-space: normal;
   }
 }
+
+
+/* Version 6 heading scale and spacing refinements */
+
+/* Home */
+.heading-row h2,
+.featured-single h2,
+.newsletter h2 {
+  font-size: 38px;
+  line-height: 1.18;
+}
+
+/* About */
+.about-page-hero h1 {
+  font-size: 52px;
+  line-height: 1.12;
+  max-width: 980px;
+}
+
+.about-page-hero {
+  padding-bottom: 58px;
+}
+
+.about-experience {
+  padding-top: 58px;
+}
+
+.experience-copy h2 {
+  font-size: 46px;
+  line-height: 1.16;
+  max-width: 720px;
+}
+
+/* Insights */
+#main-content > .page-hero h1 {
+  font-size: 46px;
+  line-height: 1.12;
+}
+
+#twenty-two-not-thirty-two h2 {
+  font-size: 38px;
+  line-height: 1.18;
+}
+
+/* Guides */
+.guide-sections h2 {
+  font-size: 38px;
+  line-height: 1.18;
+}
+
+@media (max-width: 1100px) {
+  .about-page-hero h1 {
+    font-size: 48px;
+  }
+
+  .experience-copy h2 {
+    font-size: 42px;
+  }
+
+  #main-content > .page-hero h1 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 760px) {
+  .heading-row h2,
+  .featured-single h2,
+  .newsletter h2,
+  #twenty-two-not-thirty-two h2,
+  .guide-sections h2 {
+    font-size: 34px;
+  }
+
+  .about-page-hero h1,
+  #main-content > .page-hero h1 {
+    font-size: 38px;
+  }
+
+  .experience-copy h2 {
+    font-size: 36px;
+  }
+
+  .about-page-hero {
+    padding-bottom: 46px;
+  }
+
+  .about-experience {
+    padding-top: 46px;
+  }
+}
