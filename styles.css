@@ -27,3 +27,21 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 @media(max-width:900px){.about-experience{grid-template-columns:1fr;gap:50px}.qualification-grid{grid-template-columns:1fr 1fr}.qualification-grid article:last-child{grid-column:1/-1}}
 @media(max-width:560px){.home-hero{padding:48px 0 52px}.hero-actions{flex-direction:column;align-items:stretch}.hero-actions .button{width:100%}.about-page-hero{padding-top:72px;padding-bottom:60px}.about-experience{padding-top:65px;padding-bottom:65px}.qualification-grid{grid-template-columns:1fr}.qualification-grid article:last-child{grid-column:auto}.philosophy-section{padding:72px 0}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+
+/* Version 4 refinements */
+.hero-cta{background:#f3ece4;padding:28px 0 34px;border-bottom:1px solid #dfd2c6}
+.hero-cta .hero-actions{margin-top:0}
+.about-page-hero h1{font-size:clamp(36px,4.6vw,58px)}
+.philosophy-inner h2{font-size:clamp(32px,3.5vw,42px)}
+.insights-hero h1,.guides-hero h1,.contact-hero h1{font-size:clamp(34px,4.2vw,54px)}
+.page-hero h1{font-size:clamp(34px,4.2vw,54px)}
+.qualification-grid strong{font-size:34px}
+.qualification-grid .financial-card strong{font-size:30px}
+.contact-form .consent{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start}
+.contact-form .consent span{display:inline}
+.contact-form .consent a{display:inline}
+@media(max-width:560px){
+  .hero-cta{padding:24px 0 28px}
+  .hero-banner img{min-height:0;object-fit:contain}
+}
