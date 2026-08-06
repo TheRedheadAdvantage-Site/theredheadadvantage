@@ -1,0 +1,39 @@
+WHAT CHANGED
+
+PRESERVED
+- Current visual identity, logo, hero banner, portrait, page structure, legal pages, CNAME
+- Existing About positioning, qualification cards, Guides, Insights, Contact content
+
+ADDED
+- Dedicated The Weekly Advantage page
+- Branded newsletter confirmation page
+- Newsletter CTA in primary navigation and homepage
+- Beehiiv links to newsletter.theredheadadvantage.com
+- Google Analytics 4 with consent denied by default
+- Accessible cookie-consent control and footer Manage cookies link
+- Unique SEO titles/descriptions, canonical URLs, Open Graph and X metadata
+- Sitemap.xml and robots.txt
+- Favicon and app-icon package
+- Social-sharing image
+- Updated Privacy Policy language for Beehiiv, Google Analytics, and FormSubmit
+- Mobile and accessibility refinements
+
+IMPORTANT
+No Beehiiv iframe/embed code was added because the actual embed code was not supplied.
+This version uses branded buttons that send visitors to your Beehiiv signup page.
+That is reliable, accessible, and keeps the main site independent.
+
+REVISION 2
+- Reduced repetitive wording on the About page.
+- Added the Life pillar to the Insights page.
+- Updated The Weekly Advantage introduction and all three benefit cards.
+
+REVISION 3
+- Reduced vertical space between the newsletter CTA and benefit cards.
+- Increased the card number size.
+- Kept newsletter card headings on one line on desktop where space permits.
+- Replaced the About experience section with the user's revised copy.
+
+REVISION 4
+- Increased the 'The Weekly Advantage' eyebrow size.
+- Reduced and tightened the supporting sentence beneath the hero headline for better visual balance.
