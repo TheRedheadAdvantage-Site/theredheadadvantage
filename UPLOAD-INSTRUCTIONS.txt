@@ -1,0 +1,20 @@
+THE REDHEAD ADVANTAGE — WEBSITE REFRESH
+
+SAFE REVIEW PROCESS
+1. Unzip this package on your computer.
+2. Open index.html in Chrome to preview locally.
+3. Click through every page and review desktop/mobile layouts.
+4. Upload only to the GitHub branch: website-refresh.
+5. Do not change Settings > Pages; it must remain main / root.
+6. The live website will not change until website-refresh is merged into main.
+
+BEEHIIV
+- Newsletter CTAs link to https://newsletter.theredheadadvantage.com
+- In Beehiiv, set the confirmed opt-in redirect to:
+  https://theredheadadvantage.com/newsletter-confirmed.html
+
+AFTER APPROVAL
+- Merge website-refresh into main.
+- In Google Search Console, submit:
+  https://theredheadadvantage.com/sitemap.xml
+- Test Google Analytics Realtime after accepting analytics cookies.
