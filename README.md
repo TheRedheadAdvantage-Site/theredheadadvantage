@@ -10,3 +10,4 @@ The contact and newsletter forms currently use FormSubmit. The first submission 
 
 ## Legal review
 The legal pages are practical starter templates, not legal advice. Review them with a qualified attorney before launch, especially after adding analytics, advertising, affiliate programs, ecommerce, downloadable products, consulting, or newsletter software.
+
