@@ -27,11 +27,21 @@ function loadAnalytics(){
   gtag('config','G-91BE4649ZV',{anonymize_ip:true});
 }
 
+function loadBeehiivAttribution(){
+  if(document.querySelector('script[data-tra-beehiiv-attribution]')) return;
+  const s=document.createElement('script');
+  s.async=true;
+  s.src='https://subscribe-forms.beehiiv.com/attribution.js';
+  s.dataset.traBeehiivAttribution='true';
+  document.head.appendChild(s);
+}
+
 function setConsent(value){
   localStorage.setItem(CONSENT_KEY,value);
   if(value==='granted'){
     gtag('consent','update',{analytics_storage:'granted'});
     loadAnalytics();
+    loadBeehiivAttribution();
   } else {
     gtag('consent','update',{analytics_storage:'denied'});
   }
