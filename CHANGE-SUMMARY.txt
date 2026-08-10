@@ -39,3 +39,11 @@ REVISION 4
 - Reduced and tightened the supporting sentence beneath the hero headline for better visual balance.
 
 V2 update: Moved The Burnout Reality Check from Career guides to Life guides and updated its resource category label to Life.
+
+
+Resource delivery v3:
+- Added three resource-specific download pages for free lead-magnet delivery without Beehiiv Automations.
+- Added direct PDF/XLSX download buttons to those pages.
+- Added noindex/nofollow to delivery pages and robots.txt discouragement for download assets.
+- Converted old *-thanks.html pages into redirects to the new download pages for compatibility.
+- Updated RESOURCE-SETUP-NEXT-STEPS.txt with exact Beehiiv redirect URLs.

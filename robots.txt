@@ -2,3 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /assets/downloads/
 Sitemap: https://theredheadadvantage.com/sitemap.xml
+Disallow: /corporate-exit-toolkit-download.html
+Disallow: /burnout-reality-check-download.html
+Disallow: /financial-security-scorecard-download.html
