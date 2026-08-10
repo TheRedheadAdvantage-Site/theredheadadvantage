@@ -1,33 +1,21 @@
-THE REDHEAD ADVANTAGE — RESOURCE LIBRARY SETUP
+THE REDHEAD ADVANTAGE — RESOURCE DELIVERY SETUP (NO PAID AUTOMATIONS)
 
-Included in this package:
-- Updated Guides page with 3 live resources
-- 3 dedicated preview/opt-in landing pages
-- 3 dedicated post-submit "check your inbox" pages
-- Beehiiv embed forms for each resource
-- Consent-aware Beehiiv attribution tracking
-- Partial preview images (not full readable copies)
-- Clean download files stored under assets/downloads/ for soft-gated delivery
-- Sitemap, robots.txt, and Privacy Policy updates
+Use these as the post-submit redirect URLs in the three Beehiiv embedded forms:
 
-BEEHIIV FORM REDIRECTS TO SET:
-Corporate Exit Toolkit:
-https://theredheadadvantage.com/corporate-exit-toolkit-thanks.html
+Corporate Exit Toolkit
+https://theredheadadvantage.com/corporate-exit-toolkit-download.html
 
-Burnout Reality Check:
-https://theredheadadvantage.com/burnout-reality-check-thanks.html
+Burnout Reality Check
+https://theredheadadvantage.com/burnout-reality-check-download.html
 
-Financial Security Scorecard:
-https://theredheadadvantage.com/financial-security-scorecard-thanks.html
+Financial Security Scorecard
+https://theredheadadvantage.com/financial-security-scorecard-download.html
 
-SOFT-GATED DOWNLOAD URLS FOR DELIVERY EMAILS/AUTOMATIONS:
-Corporate Exit Scorecard:
-https://theredheadadvantage.com/assets/downloads/corporate-exit-scorecard.pdf
-Corporate Exit Runway Calculator:
-https://theredheadadvantage.com/assets/downloads/corporate-exit-runway-calculator.xlsx
-Burnout Reality Check:
-https://theredheadadvantage.com/assets/downloads/burnout-reality-check.pdf
-Financial Security Scorecard:
-https://theredheadadvantage.com/assets/downloads/financial-security-scorecard.pdf
+How the flow works:
+1. Visitor previews the resource on The Redhead Advantage.
+2. Visitor submits the resource-specific Beehiiv form.
+3. Beehiiv redirects them immediately to the matching download page.
+4. The resource downloads from the site.
+5. New newsletter subscribers still complete Beehiiv double opt-in separately; existing subscribers can access the resource immediately.
 
-IMPORTANT: These file URLs are soft-gated, not truly access-controlled. Anyone who obtains the direct URL can access the file. This is appropriate for free lead magnets, but not for future paid products.
+Important: this is a soft gate, not access control. The download pages and files are intentionally excluded from the sitemap and marked/discouraged from search indexing, but someone who knows or shares the URL can still access them. Use protected digital delivery for paid products.
