@@ -1,0 +1,33 @@
+THE REDHEAD ADVANTAGE — RESOURCE LIBRARY SETUP
+
+Included in this package:
+- Updated Guides page with 3 live resources
+- 3 dedicated preview/opt-in landing pages
+- 3 dedicated post-submit "check your inbox" pages
+- Beehiiv embed forms for each resource
+- Consent-aware Beehiiv attribution tracking
+- Partial preview images (not full readable copies)
+- Clean download files stored under assets/downloads/ for soft-gated delivery
+- Sitemap, robots.txt, and Privacy Policy updates
+
+BEEHIIV FORM REDIRECTS TO SET:
+Corporate Exit Toolkit:
+https://theredheadadvantage.com/corporate-exit-toolkit-thanks.html
+
+Burnout Reality Check:
+https://theredheadadvantage.com/burnout-reality-check-thanks.html
+
+Financial Security Scorecard:
+https://theredheadadvantage.com/financial-security-scorecard-thanks.html
+
+SOFT-GATED DOWNLOAD URLS FOR DELIVERY EMAILS/AUTOMATIONS:
+Corporate Exit Scorecard:
+https://theredheadadvantage.com/assets/downloads/corporate-exit-scorecard.pdf
+Corporate Exit Runway Calculator:
+https://theredheadadvantage.com/assets/downloads/corporate-exit-runway-calculator.xlsx
+Burnout Reality Check:
+https://theredheadadvantage.com/assets/downloads/burnout-reality-check.pdf
+Financial Security Scorecard:
+https://theredheadadvantage.com/assets/downloads/financial-security-scorecard.pdf
+
+IMPORTANT: These file URLs are soft-gated, not truly access-controlled. Anyone who obtains the direct URL can access the file. This is appropriate for free lead magnets, but not for future paid products.

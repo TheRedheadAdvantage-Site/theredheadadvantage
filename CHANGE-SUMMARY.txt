@@ -37,3 +37,5 @@ REVISION 3
 REVISION 4
 - Increased the 'The Weekly Advantage' eyebrow size.
 - Reduced and tightened the supporting sentence beneath the hero headline for better visual balance.
+
+V2 update: Moved The Burnout Reality Check from Career guides to Life guides and updated its resource category label to Life.
