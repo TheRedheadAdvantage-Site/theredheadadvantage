@@ -258,3 +258,32 @@ body{background:var(--warm-ivory)}
 .download-meta{font-size:14px!important;color:var(--taupe)}
 .download-note{margin-top:30px;padding-top:24px;border-top:1px solid var(--line);font-size:15px!important;color:var(--taupe)}
 @media(max-width:560px){.download-actions{flex-direction:column}.download-actions .button{width:100%;min-width:0}}
+
+
+/* About origin story + tighter section rhythm */
+.about-page-hero{padding-top:84px;padding-bottom:50px}
+.about-experience{padding-top:50px;padding-bottom:58px}
+.about-qualifications{padding-top:34px;padding-bottom:58px}
+.advantage-origin-section{background:var(--cream);border-top:1px solid var(--line);padding:68px 0 72px}
+.advantage-origin-inner{max-width:980px}
+.advantage-origin-inner .eyebrow{margin:0 0 18px}
+.advantage-origin-inner h2{font-size:clamp(34px,3.9vw,48px);max-width:900px;margin-bottom:30px}
+.advantage-origin-copy{max-width:840px}
+.advantage-origin-copy p{font-size:18px;line-height:1.72;margin:0 0 20px}
+.advantage-origin-emphasis{font:600 27px/1.45 "Playfair Display",Georgia,serif;color:var(--rust);margin-top:30px!important;margin-bottom:0!important}
+.philosophy-section{padding:72px 0}
+
+/* The Weekly Advantage archive */
+.newsletter-hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.newsletter-hero-actions .button-outline{background:transparent;color:var(--charcoal);border-color:var(--charcoal)}
+.newsletter-hero-actions .button-outline:hover,.newsletter-hero-actions .button-outline:focus{background:var(--charcoal);color:#fff}
+.newsletter-archive-section{background:var(--cream);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:76px 0;scroll-margin-top:110px}
+.newsletter-archive-inner{display:grid;grid-template-columns:1.2fr .8fr;gap:72px;align-items:center}
+.newsletter-archive-copy h2{font-size:clamp(36px,4vw,48px);max-width:700px}
+.newsletter-archive-copy>p:not(.eyebrow){max-width:700px;font-size:18px}
+.newsletter-archive-note{font-size:14px!important;color:var(--taupe)}
+.newsletter-archive-action{background:var(--ivory);border:1px solid var(--line);padding:34px;display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.newsletter-archive-action .button{width:100%;text-align:center}
+.newsletter-archive-action span{font-size:12px;color:var(--taupe)}
+@media(max-width:900px){.newsletter-archive-inner{grid-template-columns:1fr;gap:34px}}
+@media(max-width:560px){.about-page-hero{padding-top:64px;padding-bottom:42px}.about-experience{padding-top:42px;padding-bottom:48px}.about-qualifications{padding-top:28px;padding-bottom:48px}.advantage-origin-section{padding:56px 0 60px}.advantage-origin-copy p{font-size:17px}.advantage-origin-emphasis{font-size:23px}.philosophy-section{padding:60px 0}.newsletter-archive-section{padding:58px 0}.newsletter-archive-action{padding:26px}}
