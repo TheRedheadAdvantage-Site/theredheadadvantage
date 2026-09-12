@@ -1,29 +1,9 @@
-THE REDHEAD ADVANTAGE — WEEK 4 WEBSITE UPDATE
-Promotion Conversation Planner
+Week 4 Promotion Conversation Planner preview update
 
-UPLOAD THESE FILES/FOLDERS TO THE ROOT OF THE website-refresh BRANCH:
+Upload these THREE files to the website-refresh branch:
+1) promotion-conversation-planner.html -> repository root
+2) assets/guides/promotion-conversation-planner-preview-1-v2.jpg
+3) assets/guides/promotion-conversation-planner-preview-2-v2.jpg
 
-resources.html
-promotion-conversation-planner.html
-promotion-conversation-planner-download.html
-sitemap.xml
-assets/guides/promotion-conversation-planner-preview-1.jpg
-assets/guides/promotion-conversation-planner-preview-2.jpg
-assets/downloads/promotion-conversation-planner.pdf
-
-WHAT THIS UPDATE DOES
-• Adds The Promotion Conversation Planner to the Career section of Guides.
-• Adds a dedicated preview/landing page.
-• Embeds Beehiiv form fcff00cc-983b-426d-9ddf-45bae08c9cc7.
-• Sends subscribers to promotion-conversation-planner-download.html after form submission (configure this redirect in Beehiiv).
-• Adds the cleansed 2-page PDF as the downloadable file.
-• Adds the public landing page to sitemap.xml.
-• Keeps the private download page out of the sitemap and marks it noindex/nofollow.
-
-IMPORTANT BEEHIIV REDIRECT
-Set the Promotion Conversation Planner form redirect to:
-https://theredheadadvantage.com/promotion-conversation-planner-download.html
-
-DO NOT upload the outer folder or ZIP itself to GitHub.
-Upload the CONTENTS so resources.html, sitemap.xml, and the new HTML files sit at repository root,
-while the image/PDF files stay inside their assets/guides and assets/downloads folders.
+The new filenames bypass browser caching. Do not delete the existing preview files first.
+After upload, commit, open a pull request from website-refresh to main, merge, and wait for Pages deployment.
