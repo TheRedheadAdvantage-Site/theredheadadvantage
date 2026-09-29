@@ -1,37 +1,30 @@
-TRA Week 5 - Golden Handcuffs Scorecard + Optionality Plan
+TRA Insights Article Update
 
-UPLOAD TO THE website-refresh BRANCH.
+Upload the CONTENTS of this folder to the website-refresh branch.
 
-Upload the CONTENTS of this folder, preserving the assets/guides and assets/downloads folders.
-
-Files included:
-- resources.html
-- golden-handcuffs-scorecard.html
-- golden-handcuffs-scorecard-download.html
+Files:
+- insights.html
+- why-working-hard-is-not-always-enough.html
+- six-figures-does-not-automatically-mean-freedom.html
+- what-big-companies-actually-optimize-for.html
+- ambition-should-create-more-freedom.html
 - sitemap.xml
-- assets/guides/golden-handcuffs-scorecard-preview-1-v1.jpg
-- assets/guides/golden-handcuffs-scorecard-preview-2-v1.jpg
-- assets/downloads/golden-handcuffs-scorecard.pdf
 
-Beehiiv form ID:
-a06ef5f5-c81d-4402-8582-62316632821d
-
-Beehiiv redirect MUST be:
-https://theredheadadvantage.com/golden-handcuffs-scorecard-download.html
-
-Preview treatment:
-- top portion only
-- fade/blur at bottom
-- existing white framed preview box
-- versioned filenames to avoid browser caching
-
-The YouTube footer link is included on the updated Guides page and both new Week 5 pages:
-https://www.youtube.com/@TheRedheadAdvantage
+What this update does:
+- Replaces the Insights placeholders with four finished article pages.
+- Embeds the provided TikTok/YouTube videos where available.
+- Leaves “What big companies actually optimize for” text-first, with a Weekly Advantage CTA.
+- Makes the Featured Series banner clickable to the current “You Might Be Underpaid. Here’s How to Find Out.” TikTok.
+- Adds the specified related resource CTA to each article.
+- Adds YouTube to the footer on every file in this package.
+- Updates the sitemap with all four article URLs and the Golden Handcuffs resource.
 
 Suggested commit:
-Add Week 5 Golden Handcuffs resource
+Publish TRA Insights articles
 
-Then create a pull request:
+Then:
 base: main <- compare: website-refresh
+Create pull request -> merge -> wait for Pages deployment to turn green.
 
-Merge and wait for GitHub Pages deployment to turn green.
+Important:
+This package does NOT include index.html, so it will not change the homepage. The outstanding homepage YouTube-footer change should be handled separately from the current live index.html to avoid overwriting newer homepage work.
