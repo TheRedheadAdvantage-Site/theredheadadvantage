@@ -1,30 +1,22 @@
-TRA Insights Article Update
+Homepage YouTube + banner update
 
-Upload the CONTENTS of this folder to the website-refresh branch.
+Upload these files to the website-refresh branch:
 
-Files:
-- insights.html
-- why-working-hard-is-not-always-enough.html
-- six-figures-does-not-automatically-mean-freedom.html
-- what-big-companies-actually-optimize-for.html
-- ambition-should-create-more-freedom.html
-- sitemap.xml
+- index.html -> repository root
+- assets/hero-banner.jpg -> replace the existing file in assets/
 
 What this update does:
-- Replaces the Insights placeholders with four finished article pages.
-- Embeds the provided TikTok/YouTube videos where available.
-- Leaves “What big companies actually optimize for” text-first, with a Weekly Advantage CTA.
-- Makes the Featured Series banner clickable to the current “You Might Be Underpaid. Here’s How to Find Out.” TikTok.
-- Adds the specified related resource CTA to each article.
-- Adds YouTube to the footer on every file in this package.
-- Updates the sitemap with all four article URLs and the Golden Handcuffs resource.
+- Replaces the homepage hero/banner image with the version that includes YouTube
+- Adds YouTube to the homepage footer, directly after Facebook
+- Preserves all other homepage content and structure
+
+YouTube:
+https://www.youtube.com/@TheRedheadAdvantage
 
 Suggested commit:
-Publish TRA Insights articles
+Update homepage banner and YouTube footer
 
-Then:
+Then create a pull request:
 base: main <- compare: website-refresh
-Create pull request -> merge -> wait for Pages deployment to turn green.
 
-Important:
-This package does NOT include index.html, so it will not change the homepage. The outstanding homepage YouTube-footer change should be handled separately from the current live index.html to avoid overwriting newer homepage work.
+Merge and wait for the GitHub Pages deployment to turn green.
