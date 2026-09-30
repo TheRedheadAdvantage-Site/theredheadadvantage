@@ -1,0 +1,40 @@
+TRA WEEK 7 — CAREER WINS TRACKER WEBSITE UPDATE
+
+Prepared against the current live resource pages on September 30, 2026.
+This is a prepared update; nothing has been published.
+
+1. Create a new Beehiiv signup form for the Career Wins Tracker.
+   Copy the configuration of your existing resource form, including the
+   subscribed-reader flow, and set its successful signup redirect to:
+   https://theredheadadvantage.com/career-wins-tracker-download.html
+   If your existing flow sends a resource email, update that email with
+   the same download-page URL.
+
+2. Copy the new form embed. In career-wins-tracker.html, replace the
+   paragraph between TRA_TRACKER_FORM_START and TRA_TRACKER_FORM_END
+   with that exact embed. Do not reuse the Golden Handcuffs form ID.
+
+3. Upload these files to your existing GitHub website repository,
+   preserving these paths:
+   career-wins-tracker.html
+   career-wins-tracker-download.html
+   resources.html (replaces the current Guides page)
+   assets/guides/career-wins-tracker-preview-v1.jpg
+   assets/downloads/TRA_Career_Wins_Tracker_PUBLIC_FINAL.pdf
+   Do not upload these instructions. No change to index.html, styles.css,
+   or script.js is needed. Existing navigation, footer, cookie controls,
+   styles, and other resources have been preserved.
+
+4. Check before making the update live:
+   - Preview on desktop and mobile.
+   - Test a new signup and an existing-subscriber signup.
+   - Confirm both reach the tracker download page.
+   - Open and download the PDF from that page.
+   - Confirm the Guides card opens the tracker landing page.
+
+5. Week 7 newsletter/resource CTA link:
+   https://theredheadadvantage.com/career-wins-tracker.html
+
+The preview uses only the top half of the final PDF, with a softly blurred
+lower edge. The download page is noindex; its URL is not access-controlled,
+matching a standard redirect-based resource delivery approach.
