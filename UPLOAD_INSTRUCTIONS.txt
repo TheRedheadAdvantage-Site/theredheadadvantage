@@ -3,16 +3,13 @@ TRA WEEK 7 — CAREER WINS TRACKER WEBSITE UPDATE
 Prepared against the current live resource pages on September 30, 2026.
 This is a prepared update; nothing has been published.
 
-1. Create a new Beehiiv signup form for the Career Wins Tracker.
-   Copy the configuration of your existing resource form, including the
-   subscribed-reader flow, and set its successful signup redirect to:
-   https://theredheadadvantage.com/career-wins-tracker-download.html
-   If your existing flow sends a resource email, update that email with
-   the same download-page URL.
+1. The supplied Career Wins Tracker Beehiiv embed is already installed:
+   cd598a88-905b-4250-b3f8-bdd5943d54d0
 
-2. Copy the new form embed. In career-wins-tracker.html, replace the
-   paragraph between TRA_TRACKER_FORM_START and TRA_TRACKER_FORM_END
-   with that exact embed. Do not reuse the Golden Handcuffs form ID.
+2. In Beehiiv, confirm the form's successful signup redirect is:
+   https://theredheadadvantage.com/career-wins-tracker-download.html
+   If the form sends a resource email, use the same download-page URL.
+   The embed does not confirm redirect or email-delivery settings.
 
 3. Upload these files to your existing GitHub website repository,
    preserving these paths:
