@@ -287,3 +287,37 @@ body{background:var(--warm-ivory)}
 .newsletter-archive-action span{font-size:12px;color:var(--taupe)}
 @media(max-width:900px){.newsletter-archive-inner{grid-template-columns:1fr;gap:34px}}
 @media(max-width:560px){.about-page-hero{padding-top:64px;padding-bottom:42px}.about-experience{padding-top:42px;padding-bottom:48px}.about-qualifications{padding-top:28px;padding-bottom:48px}.advantage-origin-section{padding:56px 0 60px}.advantage-origin-copy p{font-size:17px}.advantage-origin-emphasis{font-size:23px}.philosophy-section{padding:60px 0}.newsletter-archive-section{padding:58px 0}.newsletter-archive-action{padding:26px}}
+
+/* TRA resource signup embeds: mobile-only responsive guardrails.
+   Beehiiv's v3 loader renders the working form in a cross-origin iframe.
+   We can size the iframe and its page-level wrapper here, but not style
+   the field, CTA, or consent layout inside Beehiiv's iframe. */
+@media(max-width:600px){
+  .resource-form,
+  .mvr-form-card{
+    min-width:0;
+    max-width:100%;
+  }
+
+  .resource-form > div,
+  .mvr-form-card > div,
+  .resource-form iframe,
+  .mvr-form-card iframe{
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    display:block !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+  }
+
+  .resource-form iframe,
+  .mvr-form-card iframe{
+    border:0;
+  }
+
+  .resource-form{
+    padding-left:14px;
+    padding-right:14px;
+  }
+}

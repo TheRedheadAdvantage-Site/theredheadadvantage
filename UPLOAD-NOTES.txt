@@ -1,11 +1,40 @@
-Small Market Value landing page patch
+TRA resource mobile-form + TikTok redirect update
 
-What changed:
-- Removed the duplicate newsletter-consent sentence beneath the Beehiiv form.
-- No other content, layout, navigation, footer, or resource files were changed.
+REPLACE:
+- styles.css
+- market-value-reality-check.html
 
-Upload:
-- On website-refresh, upload market-value-reality-check.html to the repository root and replace the existing file.
+ADD:
+- tiktok/index.html
+  Upload the tiktok folder at the repository root.
+
+WHAT THIS DOES
+- Applies the same mobile-only Beehiiv container/iframe formatting fix to every TRA resource page using .resource-form.
+- At 600px and below, the page-level Beehiiv wrapper/iframe uses the full available width.
+- Reduces resource-form horizontal padding to 14px on mobile only.
+- Reduces the Market Value white-card horizontal padding to 14px on mobile only.
+- Preserves desktop styling.
+- Removes the duplicate Market Value disclosure beneath Beehiiv.
+- Adds the clean TikTok redirect.
+
+TIKTOK DESTINATION
+https://theredheadadvantage.com/market-value-reality-check?utm_source=tiktok&utm_medium=social&utm_campaign=market_value_reality_check
+
+BEEHIIV LIMITATION
+The Beehiiv v3 loader renders the working form in a cross-origin iframe. The TRA site can control the iframe's outer width, but cannot reach inside it to force:
+- internal email field / CTA stacking
+- internal field and button width
+- “Get My Reality Check” no-wrap behavior
+- internal consent-checkbox text wrapping
+
+Those remaining internal layout details are controlled by Beehiiv's form template/editor.
+
+QA
+Tested page-level responsive behavior at 375px, 390px and 430px with an intentionally fixed-width 400px mock iframe:
+- no horizontal overflow
+- iframe constrained to the resource card
+- 14px mobile card padding
+Desktop CSS is unchanged because all new rules are inside max-width:600px.
 
 Suggested commit:
-Remove duplicate Market Value consent copy
+Improve resource forms on mobile and add TikTok redirect
