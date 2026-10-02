@@ -1,22 +1,34 @@
-Homepage YouTube + banner update
+TRA Market Value + Resources Sitewide Update
 
-Upload these files to the website-refresh branch:
+UPLOAD TO: website-refresh
+Upload the CONTENTS of this package, preserving the assets folders.
 
-- index.html -> repository root
-- assets/hero-banner.jpg -> replace the existing file in assets/
+What this update includes:
+1. Adds The Market Value Reality Check under Career Resources.
+2. Adds market-value-reality-check.html with the supplied Beehiiv form:
+   0ba96499-bb77-452a-8d54-062e7f6b4cfa
+3. Adds market-value-reality-check-download.html.
+4. Adds assets/downloads/market-value-reality-check.pdf.
+5. Adds assets/guides/market-value-reality-check-preview-v1.jpg.
+6. Changes the site navigation label from Guides to Resources.
+7. Cleans the footer sitewide:
+   - Contact remains under Navigate.
+   - Follow contains Instagram, TikTok, Facebook and YouTube only.
+   - The repeated hello@ links are removed from the footer.
+8. Updates Resources page naming and sitemap.
 
-What this update does:
-- Replaces the homepage hero/banner image with the version that includes YouTube
-- Adds YouTube to the homepage footer, directly after Facebook
-- Preserves all other homepage content and structure
+Beehiiv setting to confirm before promoting the link:
+Set the Market Value Reality Check form's post-submit redirect to:
+https://theredheadadvantage.com/market-value-reality-check-download.html
 
-YouTube:
-https://www.youtube.com/@TheRedheadAdvantage
+The Weekly Advantage archive is already visible on newsletter.html, so no extra archive page was added.
 
 Suggested commit:
-Update homepage banner and YouTube footer
+Add Market Value resource and refresh Resources navigation
 
-Then create a pull request:
+Then:
 base: main <- compare: website-refresh
+Create pull request -> merge -> wait for GitHub Pages to turn green.
 
-Merge and wait for the GitHub Pages deployment to turn green.
+TikTok bio tracking link when ready:
+https://theredheadadvantage.com/market-value-reality-check.html?utm_source=tiktok&utm_medium=bio&utm_campaign=market_value_reality_check
