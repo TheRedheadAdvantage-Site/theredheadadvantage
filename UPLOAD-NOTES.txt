@@ -1,43 +1,11 @@
-TRA Market Value + Resources Sitewide Update
+Small Market Value landing page patch
 
-UPLOAD TO: website-refresh
-Upload the CONTENTS of this package, preserving the assets folders.
+What changed:
+- Removed the duplicate newsletter-consent sentence beneath the Beehiiv form.
+- No other content, layout, navigation, footer, or resource files were changed.
 
-What this update includes:
-1. Adds The Market Value Reality Check under Career Resources.
-2. Adds market-value-reality-check.html with the supplied Beehiiv form:
-   0ba96499-bb77-452a-8d54-062e7f6b4cfa
-3. Adds market-value-reality-check-download.html.
-4. Adds assets/downloads/market-value-reality-check.pdf.
-5. Adds assets/guides/market-value-reality-check-preview-v1.jpg.
-6. Changes the site navigation label from Guides to Resources.
-7. Cleans the footer sitewide:
-   - Contact remains under Navigate.
-   - Follow contains Instagram, TikTok, Facebook and YouTube only.
-   - The repeated hello@ links are removed from the footer.
-8. Updates Resources page naming and sitemap.
-
-Beehiiv setting to confirm before promoting the link:
-Set the Market Value Reality Check form's post-submit redirect to:
-https://theredheadadvantage.com/market-value-reality-check-download.html
-
-The Weekly Advantage archive is already visible on newsletter.html, so no extra archive page was added.
+Upload:
+- On website-refresh, upload market-value-reality-check.html to the repository root and replace the existing file.
 
 Suggested commit:
-Add Market Value resource and refresh Resources navigation
-
-Then:
-base: main <- compare: website-refresh
-Create pull request -> merge -> wait for GitHub Pages to turn green.
-
-TikTok bio tracking link when ready:
-https://theredheadadvantage.com/market-value-reality-check.html?utm_source=tiktok&utm_medium=bio&utm_campaign=market_value_reality_check
-
-
-SMALL REFINEMENTS INCLUDED:
-- Reduced the Market Value landing-page headline size.
-- Tightened the space before the Beehiiv form.
-- Removed the duplicate custom Market Value heading/subtitle inside the white form card.
-- Preserved the newsletter consent sentence directly beneath the form.
-- Changed “career leverage — and see” to “career leverage, and see”.
-- Ensured YouTube appears in every page footer in this package.
+Remove duplicate Market Value consent copy
