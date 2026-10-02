@@ -32,3 +32,12 @@ Create pull request -> merge -> wait for GitHub Pages to turn green.
 
 TikTok bio tracking link when ready:
 https://theredheadadvantage.com/market-value-reality-check.html?utm_source=tiktok&utm_medium=bio&utm_campaign=market_value_reality_check
+
+
+SMALL REFINEMENTS INCLUDED:
+- Reduced the Market Value landing-page headline size.
+- Tightened the space before the Beehiiv form.
+- Removed the duplicate custom Market Value heading/subtitle inside the white form card.
+- Preserved the newsletter consent sentence directly beneath the form.
+- Changed “career leverage — and see” to “career leverage, and see”.
+- Ensured YouTube appears in every page footer in this package.
