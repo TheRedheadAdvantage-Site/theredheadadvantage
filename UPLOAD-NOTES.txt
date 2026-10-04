@@ -1,40 +1,20 @@
-TRA resource mobile-form + TikTok redirect update
+TRA homepage conversion-priority update
 
 REPLACE:
-- styles.css
-- market-value-reality-check.html
+- index.html
 
-ADD:
-- tiktok/index.html
-  Upload the tiktok folder at the repository root.
+What changed:
+- Removed “Start Here” and “Read the Latest Insights” from the top CTA row.
+- Top CTAs are now “Get a Free Resource” and “Get The Weekly Advantage.”
+- Added a featured Market Value Reality Check section directly below the hero.
+- Moved The Weekly Advantage higher on the homepage.
+- Moved Featured Series and Latest Insights lower.
+- Moved the Four Pillars section to the bottom of the homepage content.
+- Updated “Explore ... guides” wording to “Explore ... resources.”
+- Pointed the homepage insight cards to the actual article pages.
+- Replaced the stale Featured Series anchor with the Insights page.
 
-WHAT THIS DOES
-- Applies the same mobile-only Beehiiv container/iframe formatting fix to every TRA resource page using .resource-form.
-- At 600px and below, the page-level Beehiiv wrapper/iframe uses the full available width.
-- Reduces resource-form horizontal padding to 14px on mobile only.
-- Reduces the Market Value white-card horizontal padding to 14px on mobile only.
-- Preserves desktop styling.
-- Removes the duplicate Market Value disclosure beneath Beehiiv.
-- Adds the clean TikTok redirect.
-
-TIKTOK DESTINATION
-https://theredheadadvantage.com/market-value-reality-check?utm_source=tiktok&utm_medium=social&utm_campaign=market_value_reality_check
-
-BEEHIIV LIMITATION
-The Beehiiv v3 loader renders the working form in a cross-origin iframe. The TRA site can control the iframe's outer width, but cannot reach inside it to force:
-- internal email field / CTA stacking
-- internal field and button width
-- “Get My Reality Check” no-wrap behavior
-- internal consent-checkbox text wrapping
-
-Those remaining internal layout details are controlled by Beehiiv's form template/editor.
-
-QA
-Tested page-level responsive behavior at 375px, 390px and 430px with an intentionally fixed-width 400px mock iframe:
-- no horizontal overflow
-- iframe constrained to the resource card
-- 14px mobile card padding
-Desktop CSS is unchanged because all new rules are inside max-width:600px.
+No other site pages or files are changed.
 
 Suggested commit:
-Improve resource forms on mobile and add TikTok redirect
+Reorder homepage around resources and newsletter
