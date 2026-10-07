@@ -321,3 +321,18 @@ body{background:var(--warm-ivory)}
     padding-right:14px;
   }
 }
+
+/* Beehiiv embed loading/fallback messaging */
+.beehiiv-load-status{
+  margin:0;
+  padding:18px 4px;
+  text-align:center;
+  font-size:14px;
+  line-height:1.5;
+  color:var(--taupe);
+}
+.beehiiv-load-status[hidden]{display:none}
+.beehiiv-load-status a{
+  color:var(--rust);
+  text-decoration:underline;
+}
