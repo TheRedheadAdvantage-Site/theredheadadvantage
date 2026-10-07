@@ -1,20 +1,39 @@
-TRA homepage conversion-priority update
+TRA Beehiiv reliability + platform tracking update
 
 REPLACE:
-- index.html
+- script.js
+- styles.css
 
-What changed:
-- Removed “Start Here” and “Read the Latest Insights” from the top CTA row.
-- Top CTAs are now “Get a Free Resource” and “Get The Weekly Advantage.”
-- Added a featured Market Value Reality Check section directly below the hero.
-- Moved The Weekly Advantage higher on the homepage.
-- Moved Featured Series and Latest Insights lower.
-- Moved the Four Pillars section to the bottom of the homepage content.
-- Updated “Explore ... guides” wording to “Explore ... resources.”
-- Pointed the homepage insight cards to the actual article pages.
-- Replaced the stale Featured Series anchor with the Insights page.
+ADD THESE ROOT-LEVEL FOLDERS:
+- tiktok/
+- instagram/
+- youtube/
+- facebook/
 
-No other site pages or files are changed.
+WHAT CHANGED
+- Preserves the existing mobile-width fixes for TRA resource signup embeds.
+- Adds a lightweight “Loading signup form…” message on TRA resource pages.
+- Hides that message automatically when Beehiiv renders.
+- If Beehiiv has not rendered after 5 seconds, the page retries the Beehiiv loader.
+- It makes at most two conservative retries.
+- If Beehiiv still does not render, visitors get a simple refresh link instead of a blank white box.
+- Beehiiv's form fields, consent checkbox, subscription handling, and redirect behavior are NOT replaced or modified.
+- Adds clean platform URLs for TikTok, Instagram, YouTube, and Facebook.
+
+CLEAN LINKS
+https://theredheadadvantage.com/tiktok
+https://theredheadadvantage.com/instagram
+https://theredheadadvantage.com/youtube
+https://theredheadadvantage.com/facebook
+
+All four redirect to the Market Value Reality Check with:
+utm_medium=social
+utm_campaign=market_value_reality_check
+and the appropriate utm_source.
+
+BEEHIIV NOTE
+The actual Beehiiv form is cross-origin. TRA can retry the loader and manage the outside container,
+but the field/button/checkbox layout and submission behavior remain controlled by Beehiiv.
 
 Suggested commit:
-Reorder homepage around resources and newsletter
+Improve Beehiiv loading and add platform tracking links
