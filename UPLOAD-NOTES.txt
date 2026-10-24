@@ -1,47 +1,13 @@
-TRA Native Resource Access Update
+TRA Resource Wording + Privacy Update
 
-SOURCE
-Built from the current main-branch ZIP supplied on 2026-10-24.
+Upload the contents of this ZIP to the ROOT of the website-refresh branch.
 
-REPLACE THESE ROOT FILES
-- styles.css
-- script.js
+Changes:
+1. All seven native resource forms now say:
+   “I agree to receive The Weekly Advantage newsletter by email. I can unsubscribe at any time. If I previously unsubscribed, checking this box will resubscribe me.”
+2. privacy.html now reflects the current GitHub Pages + Cloudflare + Beehiiv + FormSubmit setup, the private resource flow, UTM/referral attribution sent with resource requests, and the browser resource-access token.
 
-REPLACE THESE RESOURCE LANDING PAGES
-- burnout-reality-check.html
-- career-wins-tracker.html
-- corporate-exit-toolkit.html
-- financial-security-scorecard.html
-- golden-handcuffs-scorecard.html
-- market-value-reality-check.html
-- promotion-conversation-planner.html
+No Worker, download, styling, or resource-access logic changes are included.
 
-REPLACE THESE DOWNLOAD PAGES
-- burnout-reality-check-download.html
-- career-wins-tracker-download.html
-- corporate-exit-toolkit-download.html
-- financial-security-scorecard-download.html
-- golden-handcuffs-scorecard-download.html
-- market-value-reality-check-download.html
-- promotion-conversation-planner-download.html
-
-WHAT CHANGES
-- Removes the Beehiiv iframe from all seven TRA resource landing pages.
-- Uses a native TRA email field + explicit newsletter consent checkbox.
-- Sends the email securely to:
-  https://tra-resource-access.twilight-violet-d96b.workers.dev
-- Stores only the returned access token in the visitor's browser.
-- One successful unlock gives that browser access to every TRA resource.
-- Previously unsubscribed users are reactivated only after checking the explicit consent box.
-- Download buttons use the private Worker/R2 route instead of the public asset URL.
-- Download events continue to write to DOWNLOAD_ANALYTICS.
-- UTM parameters from TikTok / Instagram / YouTube / Facebook flow through to the Worker.
-- Desktop resource-page structure/copy is preserved; native-form styling is responsive.
-
-IMPORTANT SAFE ROLLOUT
-Do NOT delete the existing files under assets/downloads yet.
-First deploy and test the native forms and Worker-backed downloads on the live site.
-After successful testing, create a second cleanup update that removes the old public download files.
-
-SUGGESTED COMMIT
-Switch resource pages to native secure access
+Suggested commit:
+Clarify resource consent and update privacy policy
