@@ -1,39 +1,47 @@
-TRA Beehiiv reliability + platform tracking update
+TRA Native Resource Access Update
 
-REPLACE:
-- script.js
+SOURCE
+Built from the current main-branch ZIP supplied on 2026-10-24.
+
+REPLACE THESE ROOT FILES
 - styles.css
+- script.js
 
-ADD THESE ROOT-LEVEL FOLDERS:
-- tiktok/
-- instagram/
-- youtube/
-- facebook/
+REPLACE THESE RESOURCE LANDING PAGES
+- burnout-reality-check.html
+- career-wins-tracker.html
+- corporate-exit-toolkit.html
+- financial-security-scorecard.html
+- golden-handcuffs-scorecard.html
+- market-value-reality-check.html
+- promotion-conversation-planner.html
 
-WHAT CHANGED
-- Preserves the existing mobile-width fixes for TRA resource signup embeds.
-- Adds a lightweight “Loading signup form…” message on TRA resource pages.
-- Hides that message automatically when Beehiiv renders.
-- If Beehiiv has not rendered after 5 seconds, the page retries the Beehiiv loader.
-- It makes at most two conservative retries.
-- If Beehiiv still does not render, visitors get a simple refresh link instead of a blank white box.
-- Beehiiv's form fields, consent checkbox, subscription handling, and redirect behavior are NOT replaced or modified.
-- Adds clean platform URLs for TikTok, Instagram, YouTube, and Facebook.
+REPLACE THESE DOWNLOAD PAGES
+- burnout-reality-check-download.html
+- career-wins-tracker-download.html
+- corporate-exit-toolkit-download.html
+- financial-security-scorecard-download.html
+- golden-handcuffs-scorecard-download.html
+- market-value-reality-check-download.html
+- promotion-conversation-planner-download.html
 
-CLEAN LINKS
-https://theredheadadvantage.com/tiktok
-https://theredheadadvantage.com/instagram
-https://theredheadadvantage.com/youtube
-https://theredheadadvantage.com/facebook
+WHAT CHANGES
+- Removes the Beehiiv iframe from all seven TRA resource landing pages.
+- Uses a native TRA email field + explicit newsletter consent checkbox.
+- Sends the email securely to:
+  https://tra-resource-access.twilight-violet-d96b.workers.dev
+- Stores only the returned access token in the visitor's browser.
+- One successful unlock gives that browser access to every TRA resource.
+- Previously unsubscribed users are reactivated only after checking the explicit consent box.
+- Download buttons use the private Worker/R2 route instead of the public asset URL.
+- Download events continue to write to DOWNLOAD_ANALYTICS.
+- UTM parameters from TikTok / Instagram / YouTube / Facebook flow through to the Worker.
+- Desktop resource-page structure/copy is preserved; native-form styling is responsive.
 
-All four redirect to the Market Value Reality Check with:
-utm_medium=social
-utm_campaign=market_value_reality_check
-and the appropriate utm_source.
+IMPORTANT SAFE ROLLOUT
+Do NOT delete the existing files under assets/downloads yet.
+First deploy and test the native forms and Worker-backed downloads on the live site.
+After successful testing, create a second cleanup update that removes the old public download files.
 
-BEEHIIV NOTE
-The actual Beehiiv form is cross-origin. TRA can retry the loader and manage the outside container,
-but the field/button/checkbox layout and submission behavior remain controlled by Beehiiv.
-
-Suggested commit:
-Improve Beehiiv loading and add platform tracking links
+SUGGESTED COMMIT
+Switch resource pages to native secure access

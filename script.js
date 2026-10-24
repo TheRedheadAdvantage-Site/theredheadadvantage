@@ -63,106 +63,160 @@ document.addEventListener('click',(event)=>{
   gtag('event',tracked.dataset.event,{link_url:tracked.href||'',link_text:tracked.textContent.trim()});
 });
 
-// Beehiiv form resilience for TRA resource pages.
-// Beehiiv renders forms in a cross-origin iframe, so TRA only manages the
-// outer loader/container. Subscription fields, consent, redirects, and submit
-// behavior remain entirely controlled by Beehiiv.
-(function initBeehiivFormResilience(){
-  const EMBED_SRC='https://subscribe-forms.beehiiv.com/v3/loader.js';
-  const containers=[...document.querySelectorAll('.resource-form,.mvr-form-card')];
+// Native TRA resource access
+(function initTraResourceAccess(){
+  const WORKER="https://tra-resource-access.twilight-violet-d96b.workers.dev";
+  const TOKEN_KEY='tra-resource-access-token';
+  const TOKEN_EXP_KEY='tra-resource-access-exp';
 
-  if(!containers.length) return;
-
-  // Help the browser establish the Beehiiv connection early for retries.
-  if(!document.querySelector('link[data-tra-beehiiv-preconnect]')){
-    const preconnect=document.createElement('link');
-    preconnect.rel='preconnect';
-    preconnect.href='https://subscribe-forms.beehiiv.com';
-    preconnect.crossOrigin='anonymous';
-    preconnect.dataset.traBeehiivPreconnect='true';
-    document.head.appendChild(preconnect);
+  function getToken(){
+    const token=localStorage.getItem(TOKEN_KEY);
+    const exp=Number(localStorage.getItem(TOKEN_EXP_KEY)||0);
+    if(!token || (exp && Date.now()>exp)){
+      localStorage.removeItem(TOKEN_KEY);
+      localStorage.removeItem(TOKEN_EXP_KEY);
+      return '';
+    }
+    return token;
   }
 
-  containers.forEach((container)=>{
-    const original=container.querySelector('script[data-beehiiv-form]');
-    if(!original) return;
+  function saveToken(token,days){
+    localStorage.setItem(TOKEN_KEY,token);
+    localStorage.setItem(TOKEN_EXP_KEY,String(Date.now()+(Number(days)||365)*86400000));
+  }
 
-    const formId=original.getAttribute('data-beehiiv-form');
-    if(!formId) return;
-
-    const status=document.createElement('p');
-    status.className='beehiiv-load-status';
-    status.setAttribute('role','status');
-    status.setAttribute('aria-live','polite');
-    status.textContent='Loading signup form…';
-    original.insertAdjacentElement('beforebegin',status);
-
-    let attempts=0;
-    let finished=false;
-    let retryTimer;
-
-    const hasRenderedForm=()=>Boolean(
-      container.querySelector('iframe') ||
-      container.querySelector('[data-beehiiv-form-rendered]') ||
-      [...container.children].some((el)=>el!==status && el.tagName!=='SCRIPT' && !el.classList.contains('form-privacy'))
-    );
-
-    const markLoaded=()=>{
-      if(finished) return;
-      finished=true;
-      clearTimeout(retryTimer);
-      status.hidden=true;
-      observer.disconnect();
+  function currentTracking(){
+    const p=new URLSearchParams(location.search);
+    return {
+      utm_source:p.get('utm_source')||'website',
+      utm_medium:p.get('utm_medium')||'website',
+      utm_campaign:p.get('utm_campaign')||'resource_library'
     };
+  }
 
-    const observer=new MutationObserver(()=>{
-      if(hasRenderedForm()) markLoaded();
-    });
-    observer.observe(container,{childList:true,subtree:true});
+  const form=document.querySelector('[data-tra-unlock-form]');
+  const unlocked=document.querySelector('[data-tra-unlocked]');
 
-    if(hasRenderedForm()){
-      markLoaded();
-      return;
+  if(form && unlocked){
+    if(getToken()){
+      form.hidden=true;
+      unlocked.hidden=false;
     }
 
-    const retry=()=>{
-      if(finished || hasRenderedForm()){
-        markLoaded();
+    form.addEventListener('submit',async(event)=>{
+      event.preventDefault();
+      const email=form.querySelector('input[name="email"]');
+      const consent=form.querySelector('input[name="consent"]');
+      const button=form.querySelector('button[type="submit"]');
+      const status=form.querySelector('.tra-form-status');
+      status.classList.remove('is-error');
+
+      if(!email.value.trim() || !email.checkValidity()){
+        status.textContent='Please enter a valid email address.';
+        status.classList.add('is-error');
+        email.focus();
+        return;
+      }
+      if(!consent.checked){
+        status.textContent='Please confirm the email consent to continue.';
+        status.classList.add('is-error');
+        consent.focus();
         return;
       }
 
-      attempts+=1;
+      const tracking=currentTracking();
+      button.disabled=true;
+      status.textContent='Unlocking your resources…';
 
-      // Two conservative retries only. Remove the stale loader node first so
-      // Beehiiv gets a fresh execution without duplicating the working form.
-      const stale=container.querySelector('script[data-beehiiv-form]');
-      stale?.remove();
+      try{
+        const response=await fetch(WORKER+'/unlock',{
+          method:'POST',
+          headers:{'Content-Type':'application/json'},
+          body:JSON.stringify({
+            email:email.value.trim(),
+            consent:true,
+            ...tracking
+          })
+        });
+        const data=await response.json();
+        if(!response.ok || !data.ok || !data.token){
+          throw new Error(data.error||'We couldn’t unlock the resource. Please try again.');
+        }
 
-      const fresh=document.createElement('script');
-      fresh.async=true;
-      fresh.src=EMBED_SRC;
-      fresh.setAttribute('data-beehiiv-form',formId);
-      fresh.dataset.traBeehiivRetry=String(attempts);
-      container.insertBefore(fresh, container.querySelector('.form-privacy') || null);
-
-      if(attempts<2){
-        status.textContent='Loading signup form…';
-        retryTimer=setTimeout(retry,5000);
-      }else{
-        retryTimer=setTimeout(()=>{
-          if(finished || hasRenderedForm()){
-            markLoaded();
-            return;
-          }
-          status.hidden=false;
-          status.innerHTML='The signup form is taking longer than expected. <a href="' +
-            window.location.href.split('#')[0] + '">Refresh this page</a> and try again.';
-          observer.disconnect();
-        },5000);
+        saveToken(data.token,data.expiresInDays);
+        if(typeof gtag==='function'){
+          gtag('event','resource_library_unlock',tracking);
+        }
+        location.href=form.dataset.successPage;
+      }catch(error){
+        status.textContent=error.message||'We couldn’t unlock the resource. Please try again.';
+        status.classList.add('is-error');
+        button.disabled=false;
       }
-    };
+    });
+  }
 
-    // Give Beehiiv's original async loader time to render before retrying.
-    retryTimer=setTimeout(retry,5000);
+  document.addEventListener('click',async(event)=>{
+    const link=event.target.closest('[data-tra-download]');
+    if(!link) return;
+    event.preventDefault();
+
+    const slug=link.dataset.traDownload;
+    const token=getToken();
+    const landing=document.body.dataset.traUnlockPage || 'resources.html';
+
+    if(!token){
+      location.href=landing+'#get-resource';
+      return;
+    }
+
+    const originalText=link.textContent;
+    link.setAttribute('aria-disabled','true');
+    link.textContent='Preparing download…';
+
+    const oldError=document.querySelector('.tra-download-error');
+    if(oldError) oldError.remove();
+
+    try{
+      const response=await fetch(WORKER+'/download/'+encodeURIComponent(slug),{
+        headers:{'Authorization':'Bearer '+token}
+      });
+
+      if(response.status===401){
+        localStorage.removeItem(TOKEN_KEY);
+        localStorage.removeItem(TOKEN_EXP_KEY);
+        location.href=landing+'#get-resource';
+        return;
+      }
+
+      if(!response.ok){
+        throw new Error('The download could not be prepared. Please try again.');
+      }
+
+      const blob=await response.blob();
+      const disposition=response.headers.get('Content-Disposition')||'';
+      const match=disposition.match(/filename="([^"]+)"/i);
+      const filename=match ? match[1] : slug;
+      const objectUrl=URL.createObjectURL(blob);
+      const a=document.createElement('a');
+      a.href=objectUrl;
+      a.download=filename;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(()=>URL.revokeObjectURL(objectUrl),1000);
+
+      if(typeof gtag==='function'){
+        gtag('event','resource_download',{resource:slug});
+      }
+    }catch(error){
+      const p=document.createElement('p');
+      p.className='tra-download-error';
+      p.textContent=error.message||'The download could not be prepared. Please try again.';
+      link.parentElement.appendChild(p);
+    }finally{
+      link.removeAttribute('aria-disabled');
+      link.textContent=originalText;
+    }
   });
 })();
