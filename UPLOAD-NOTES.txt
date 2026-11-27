@@ -1,36 +1,20 @@
-TRA FULL SEO + AUTHORITY + HOMEPAGE REFRESH
+TRA SEO Article Image + Homepage Copy Fix
 
-This consolidated package includes the latest versions of all website updates discussed in this SEO pass.
+Replace these 5 root files on website-refresh:
+- index.html
+- why-working-hard-is-not-always-enough.html
+- six-figures-does-not-automatically-mean-freedom.html
+- what-big-companies-actually-optimize-for.html
+- ambition-should-create-more-freedom.html
 
-INCLUDED
-1. SEO / authority refresh
-   - improved page titles and meta descriptions
-   - canonical cleanup
-   - WebSite + Organization + Person structured data on homepage
-   - ProfilePage + Person structured data on About
-   - BlogPosting structured data on Insights articles
-   - cleaned sitemap.xml with SEO-priority pages and lastmod dates
-   - noindex handling for download / thank-you / confirmation pages
-   - robots.txt cleanup
+Changes:
+1. Adds an image field to the BlogPosting structured data on all four Insights articles.
+   Current image:
+   https://theredheadadvantage.com/assets/social-share.jpg
 
-2. Visible author signals
-   - all four Insights articles visibly show:
-     “By Charlotte, founder of The Redhead Advantage”
-   - Insights landing page includes a visible author/authority line
+2. Replaces homepage em dashes with commas in the visible copy.
 
-3. Homepage featured resource refresh
-   - Career Wins Tracker replaces Market Value Reality Check as the featured homepage resource
-   - CTA points to career-wins-tracker.html
+No resource-access, Worker, Cloudflare, or download logic changes are included.
 
-NOT CHANGED
-- Cloudflare settings
-- Worker code
-- R2 resources
-- newsletter subscription logic
-- resource access/download logic
-
-UPLOAD
-Upload ALL files inside this ZIP to the ROOT of the website-refresh branch and allow GitHub to replace matching files.
-
-SUGGESTED COMMIT
-Full SEO authority and homepage refresh
+Suggested commit:
+Fix article image schema and homepage punctuation
