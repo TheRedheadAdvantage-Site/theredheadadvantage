@@ -1,13 +1,36 @@
-TRA Resource Wording + Privacy Update
+TRA FULL SEO + AUTHORITY + HOMEPAGE REFRESH
 
-Upload the contents of this ZIP to the ROOT of the website-refresh branch.
+This consolidated package includes the latest versions of all website updates discussed in this SEO pass.
 
-Changes:
-1. All seven native resource forms now say:
-   “I agree to receive The Weekly Advantage newsletter by email. I can unsubscribe at any time. If I previously unsubscribed, checking this box will resubscribe me.”
-2. privacy.html now reflects the current GitHub Pages + Cloudflare + Beehiiv + FormSubmit setup, the private resource flow, UTM/referral attribution sent with resource requests, and the browser resource-access token.
+INCLUDED
+1. SEO / authority refresh
+   - improved page titles and meta descriptions
+   - canonical cleanup
+   - WebSite + Organization + Person structured data on homepage
+   - ProfilePage + Person structured data on About
+   - BlogPosting structured data on Insights articles
+   - cleaned sitemap.xml with SEO-priority pages and lastmod dates
+   - noindex handling for download / thank-you / confirmation pages
+   - robots.txt cleanup
 
-No Worker, download, styling, or resource-access logic changes are included.
+2. Visible author signals
+   - all four Insights articles visibly show:
+     “By Charlotte, founder of The Redhead Advantage”
+   - Insights landing page includes a visible author/authority line
 
-Suggested commit:
-Clarify resource consent and update privacy policy
+3. Homepage featured resource refresh
+   - Career Wins Tracker replaces Market Value Reality Check as the featured homepage resource
+   - CTA points to career-wins-tracker.html
+
+NOT CHANGED
+- Cloudflare settings
+- Worker code
+- R2 resources
+- newsletter subscription logic
+- resource access/download logic
+
+UPLOAD
+Upload ALL files inside this ZIP to the ROOT of the website-refresh branch and allow GitHub to replace matching files.
+
+SUGGESTED COMMIT
+Full SEO authority and homepage refresh
