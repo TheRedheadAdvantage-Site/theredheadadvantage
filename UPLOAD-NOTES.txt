@@ -1,20 +1,29 @@
-TRA SEO Article Image + Homepage Copy Fix
+TRA Approved Insights Refresh
 
-Replace these 5 root files on website-refresh:
-- index.html
-- why-working-hard-is-not-always-enough.html
-- six-figures-does-not-automatically-mean-freedom.html
-- what-big-companies-actually-optimize-for.html
-- ambition-should-create-more-freedom.html
+This package publishes ONLY the four Google Doc tabs marked REVIEWED, OK TO POST.
 
-Changes:
-1. Adds an image field to the BlogPosting structured data on all four Insights articles.
-   Current image:
-   https://theredheadadvantage.com/assets/social-share.jpg
+NEW ARTICLE PAGES
+- how-to-get-important-work-conversations-in-writing.html
+- how-to-disagree-at-work-without-looking-difficult.html
+- taking-over-a-failing-project.html
+- stop-bringing-your-boss-problems-without-solutions.html
 
-2. Replaces homepage em dashes with commas in the visible copy.
+UPDATED
+- insights.html: adds the four approved articles at the top and keeps the existing articles below
+- index.html: refreshes Latest Insights with three of the new high-performing topics
+- sitemap.xml: adds all four new article URLs
 
-No resource-access, Worker, Cloudflare, or download logic changes are included.
+VIDEO EMBEDS
+- Need It in Writing: TikTok
+- Disagree at Work: YouTube Shorts
+- Taking Over a Failing Project: TikTok
+- Boss Problems Without Solutions: Instagram Reel
+
+COPY
+The article body copy comes from the exact Google Doc versions you marked REVIEWED, OK TO POST.
+
+NOT PUBLISHED
+The two tabs still marked DRAFT - REVIEW BEFORE WEBSITE were not added.
 
 Suggested commit:
-Fix article image schema and homepage punctuation
+Publish approved Week 12-15 Insights articles
